@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Chợ</title></head>
+  <style>
+    body { 
+      background: red; 
+    }
+    table, th, td {
+      border:1px solid black;
+      text-align: center;
+      padding: 8px;
+    }
+    .square {
+      height: 100px;
+      width: 100px;
+      background-color:yellow;
+    }
+  </style>
+  <body>
+
+    <script>
+
+      let soThitGa = 0;
+      let soCa = 0;
+      let soRau = 0;
+      let soMuong = 0;
+      let soGao = 0;
+
+
+      function thitGa() {
+        // alert('đã thêm thịt gà')
+        soThitGa+=1
+        document.getElementById("themThitGa").innerHTML = soThitGa + ' Thịt gà'
+      }
+      function ca() {
+        // alert('đã thêm cá')
+        soCa+=1
+        document.getElementById("themCa").innerHTML = soCa + ' Cá'
+      }
+      function rau() {
+        // alert('đã thêm rau')
+        soRau+=1
+        document.getElementById("themRau").innerHTML = soRau + ' Rau'
+      }
+      function muong() {
+        // alert('đã thêm muống')
+        soMuong+=1
+        document.getElementById("themMuong").innerHTML = soMuong + ' Muống'
+      }
+      function gao() {
+        // alert('đã thêm gạo')
+        soGao+=1
+        document.getElementById("themGao").innerHTML = soGao + ' Gạo'
+      }
+      function mua() {
+        soThitGa=0
+        document.getElementById("themThitGa").innerHTML = ''
+        soCa0=0
+        document.getElementById("themCa").innerHTML = ''
+        soRau=0
+        document.getElementById("themRau").innerHTML = ''
+        soMuong=0
+        document.getElementById("themMuong").innerHTML = ''
+        soGao=0
+        document.getElementById("themGao").innerHTML = ''
+      }
+      
+      
+
+    </script>
+
+
+
+<table style="width:100%">
+  <tr>
+    <td>
+      <img src="anhThucAn\Thịt gà.jpg" width='250'>
+      <br>
+      <button onclick="thitGa()">Thêm thịt gà vào giỏ hàng</button>
+    </td>
+    <td>
+      <img src="anhThucAn\Cá.jpg" width='250'>
+      <br>
+      <button onclick="ca()">Thêm cá vào giỏ hàng</button>
+    </td>
+    <td>
+      <img src="anhThucAn\Rau.jpg" width='250'>
+      <br>
+      <button onclick="rau()">Thêm rau vào giỏ hàng</button>
+    </td>
+    <td>
+      <img src="anhThucAn\Muống.jpg" width='250'>
+      <br>
+      <button onclick="muong()">Thêm muống vào giỏ hàng</button>
+    </td>
+    <td>
+      <img src="anhThucAn\Gạo.jpg" width='250'>
+      <br>
+      <button onclick="gao()">Thêm gạo vào giỏ hàng</button>
+    </td>
+  </tr>
+</table>
+<br><br>
+
+
+<h1>Giỏ hàng</h1>
+<div class="square">
+  <span id="themThitGa"></span>
+  <br>
+  <span id="themCa"></span>
+  <br>
+  <span id="themRau"></span>
+  <br>
+  <span id="themMuong"></span>
+  <br>
+  <span id="themGao"></span>
+</div>
+<button onclick="mua()">Mua hàng</button>
+
+    <br><br><br><br><br>
+  </body>
+</html>
