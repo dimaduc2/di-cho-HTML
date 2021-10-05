@@ -11,8 +11,8 @@
       padding: 8px;
     }
     .square {
-      height: 100px;
-      width: 100px;
+      height: 200px;
+      width: 200px;
       background-color:yellow;
     }
   </style>
@@ -28,94 +28,251 @@
 
 
       function thitGa() {
-        // alert('đã thêm thịt gà')
         soThitGa+=1
-        document.getElementById("themThitGa").innerHTML = soThitGa + ' Thịt gà'
+        document.getElementById("themThitGa").innerHTML = soThitGa
+        document.getElementById("congThitGa").innerHTML = '<button onclick="themThitGa()">+</button>'
+        document.getElementById("truThitGa").innerHTML = '<button onclick="botThitGa()">-</button>'
+        document.getElementById("chuThitGa").innerHTML = 'Thịt gà: '
       }
       function ca() {
-        // alert('đã thêm cá')
         soCa+=1
-        document.getElementById("themCa").innerHTML = soCa + ' Cá'
+        document.getElementById("themCa").innerHTML = soCa
+        document.getElementById("congCa").innerHTML = '<button onclick="themCa()">+</button>'
+        document.getElementById("truCa").innerHTML = '<button onclick="botCa()">-</button>'
+        document.getElementById("chuCa").innerHTML = 'Cá: '
       }
       function rau() {
-        // alert('đã thêm rau')
         soRau+=1
-        document.getElementById("themRau").innerHTML = soRau + ' Rau'
+        document.getElementById("themRau").innerHTML = soRau
+        document.getElementById("congRau").innerHTML = '<button onclick="themRau()">+</button>'
+        document.getElementById("truRau").innerHTML = '<button onclick="botRau()">-</button>'
+        document.getElementById("chuRau").innerHTML = 'Rau: '
       }
       function muong() {
-        // alert('đã thêm muống')
         soMuong+=1
-        document.getElementById("themMuong").innerHTML = soMuong + ' Muống'
+        document.getElementById("themMuong").innerHTML = soMuong
+        document.getElementById("congMuong").innerHTML = '<button onclick="themMuong()">+</button>'
+        document.getElementById("truMuong").innerHTML = '<button onclick="botMuong()">-</button>'
+        document.getElementById("chuMuong").innerHTML = 'Muống'
       }
       function gao() {
-        // alert('đã thêm gạo')
         soGao+=1
-        document.getElementById("themGao").innerHTML = soGao + ' Gạo'
+        document.getElementById("themGao").innerHTML = soGao
+        document.getElementById("congGao").innerHTML = '<button onclick="themGao()">+</button>'
+        document.getElementById("truGao").innerHTML = '<button onclick="botGao()">-</button>'
+        document.getElementById("chuGao").innerHTML = 'Gạo'
       }
+
+      
+      function themThitGa() {
+        soThitGa+=1
+        document.getElementById("themThitGa").innerHTML = soThitGa
+      }
+      function themCa() {
+        soCa+=1
+        document.getElementById("themCa").innerHTML = soCa
+      }
+      function themRau() {
+        soRau+=1
+        document.getElementById("themRau").innerHTML = soRau
+      }
+      function themMuong() {
+        soMuong+=1
+        document.getElementById("themMuong").innerHTML = soMuong
+      }
+      function themGao() {
+        soGao+=1
+        document.getElementById("themGao").innerHTML = soGao
+      }
+
+      function botThitGa() {
+        if(soThitGa <= 1){
+          soThitGa=0
+          document.getElementById("themThitGa").innerHTML = ''
+          document.getElementById("congThitGa").innerHTML = ''
+          document.getElementById("truThitGa").innerHTML = ''
+          document.getElementById("chuThitGa").innerHTML = ''
+        }else{
+          soThitGa-=1
+          document.getElementById("themThitGa").innerHTML = soThitGa
+        }
+      }
+      function botCa() {
+        if(soCa <= 1){
+          soCa=0
+          document.getElementById("themCa").innerHTML = ''
+          document.getElementById("congCa").innerHTML = ''
+          document.getElementById("truCa").innerHTML = ''
+          document.getElementById("chuCa").innerHTML = ''
+        }else{
+          soCa-=1
+          document.getElementById("themCa").innerHTML = soCa
+        }
+      }
+      function botRau() {
+        if(soRau <= 1){
+          soRau=0
+          document.getElementById("themRau").innerHTML = ''
+          document.getElementById("congRau").innerHTML = ''
+          document.getElementById("truRau").innerHTML = ''
+          document.getElementById("chuRau").innerHTML = ''
+        }else{
+          soRau-=1
+          document.getElementById("themRau").innerHTML = soRau
+        }
+      }
+      function botMuong() {
+        if(soMuong <= 1){
+          soMuong=0
+          document.getElementById("themMuong").innerHTML = ''
+          document.getElementById("congMuong").innerHTML = ''
+          document.getElementById("truMuong").innerHTML = ''
+          document.getElementById("chuMuong").innerHTML = ''
+        }else{
+          soMuong-=1
+          document.getElementById("themMuong").innerHTML = soMuong
+        }
+      }
+      function botGao() {
+        if(soGao <= 1){
+          soGao=0
+          document.getElementById("themGao").innerHTML = ''
+          document.getElementById("congGao").innerHTML = ''
+          document.getElementById("truGao").innerHTML = ''
+          document.getElementById("chuGao").innerHTML = ''
+        }else{
+          soGao-=1
+          document.getElementById("themGao").innerHTML = soGao
+        } 
+      }
+
+
       function mua() {
         soThitGa=0
         document.getElementById("themThitGa").innerHTML = ''
+        document.getElementById("congThitGa").innerHTML = ''
+        document.getElementById("truThitGa").innerHTML = ''
+        document.getElementById("chuThitGa").innerHTML = ''
+
         soCa=0
         document.getElementById("themCa").innerHTML = ''
+        document.getElementById("congCa").innerHTML = ''
+        document.getElementById("truCa").innerHTML = ''
+        document.getElementById("chuCa").innerHTML = ''
+        
         soRau=0
         document.getElementById("themRau").innerHTML = ''
+        document.getElementById("congRau").innerHTML = ''
+        document.getElementById("truRau").innerHTML = ''
+        document.getElementById("chuRau").innerHTML = ''
+
         soMuong=0
         document.getElementById("themMuong").innerHTML = ''
+        document.getElementById("congMuong").innerHTML = ''
+        document.getElementById("truMuong").innerHTML = ''
+        document.getElementById("chuMuong").innerHTML = ''
+        
         soGao=0
         document.getElementById("themGao").innerHTML = ''
+        document.getElementById("congGao").innerHTML = ''
+        document.getElementById("truGao").innerHTML = ''
+        document.getElementById("chuGao").innerHTML = ''
       }
       
-      
+
+
+// if(soGao===0){
+//   document.getElementById("nutBamThitGa").innerHTML = ''
+// }
+// if(soGao===0){
+//   document.getElementById("nutBamCa").innerHTML = ''
+// }
+// if(soGao===0){
+//   document.getElementById("nutBamRau").innerHTML = ''
+// }
+// if(soGao===0){
+//   document.getElementById("nutBamMuong").innerHTML = ''
+// }
+// if(soGao===0){
+//   document.getElementById("nutBamGao").innerHTML = ''
+// }
+
 
     </script>
 
 
 
-<table style="width:100%">
-  <tr>
-    <td>
-      <img src="anhThucAn\Thịt gà.jpg" width='250'>
-      <br>
-      <button onclick="thitGa()">Thêm thịt gà vào giỏ hàng</button>
-    </td>
-    <td>
-      <img src="anhThucAn\Cá.jpg" width='250'>
-      <br>
-      <button onclick="ca()">Thêm cá vào giỏ hàng</button>
-    </td>
-    <td>
-      <img src="anhThucAn\Rau.jpg" width='250'>
-      <br>
-      <button onclick="rau()">Thêm rau vào giỏ hàng</button>
-    </td>
-    <td>
-      <img src="anhThucAn\Muống.jpg" width='250'>
-      <br>
-      <button onclick="muong()">Thêm muống vào giỏ hàng</button>
-    </td>
-    <td>
-      <img src="anhThucAn\Gạo.jpg" width='250'>
-      <br>
-      <button onclick="gao()">Thêm gạo vào giỏ hàng</button>
-    </td>
-  </tr>
-</table>
-<br><br>
+    <table style="width:100%">
+      <tr>
+        <td>
+          <img src="anhThucAn\Thịt gà.jpg" width='250'>
+          <br>
+          <button onclick="thitGa()">Thêm thịt gà vào giỏ hàng</button>
+        </td>
+        <td>
+          <img src="anhThucAn\Cá.jpg" width='250'>
+          <br>
+          <button onclick="ca()">Thêm cá vào giỏ hàng</button>
+        </td>
+        <td>
+          <img src="anhThucAn\Rau.jpg" width='250'>
+          <br>
+          <button onclick="rau()">Thêm rau vào giỏ hàng</button>
+        </td>
+        <td>
+          <img src="anhThucAn\Muống.jpg" width='250'>
+          <br>
+          <button onclick="muong()">Thêm muống vào giỏ hàng</button>
+        </td>
+        <td>
+          <img src="anhThucAn\Gạo.jpg" width='250'>
+          <br>
+          <button onclick="gao()">Thêm gạo vào giỏ hàng</button>
+        </td>
+      </tr>
+    </table>
+    <br><br>
+    
+    
+    
+    
 
+    <h1>Giỏ hàng</h1>
+    <div class="square">
+      <span id="chuThitGa"></span>
+      <span id="truThitGa"></span>
+      <span id="themThitGa"></span>
+      <span id="congThitGa">  </span>
+      
+      <br><br>
+      
+      <span id="chuCa"></span>
+      <span id="truCa"></span>
+      <span id="themCa"></span>
+      <span id="congCa"></span>
 
-<h1>Giỏ hàng</h1>
-<div class="square">
-  <span id="themThitGa"></span>
-  <br>
-  <span id="themCa"></span>
-  <br>
-  <span id="themRau"></span>
-  <br>
-  <span id="themMuong"></span>
-  <br>
-  <span id="themGao"></span>
-</div>
-<button onclick="mua()">Mua hàng</button>
+      <br><br>
+      
+      <span id="chuRau"></span>
+      <span id="truRau"></span>
+      <span id="themRau"></span>
+      <span id="congRau"></span>
+      
+      <br><br>
+      
+      <span id="chuMuong"></span>
+      <span id="truMuong"></span>
+      <span id="themMuong"></span>
+      <span id="congMuong"></span>
+      
+      <br><br>
+      
+      <span id="chuGao"></span>
+      <span id="truGao"></span>
+      <span id="themGao"></span>
+      <span id="congGao"></span>
+    </div>
+    <button onclick="mua()">Mua hàng</button>
 
     <br><br><br><br><br>
   </body>
